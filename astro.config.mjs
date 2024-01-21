@@ -2,6 +2,7 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
+import markdoc from "@astrojs/markdoc";
 const SERVER_PORT = 3001;
 // the url to access your blog during local development
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
@@ -23,5 +24,5 @@ export default defineConfig({
   server: {
     port: SERVER_PORT
   },
-  integrations: [tailwind(), sitemap(), react()]
+  integrations: [tailwind(), sitemap(), react(), markdoc()]
 });

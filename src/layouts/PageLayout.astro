@@ -1,51 +1,49 @@
 ---
-import "@/styles/global.css";
+import '@/styles/global.css';
 
-import GoogleFont from "./GoogleFont.astro";
-import FontAwesome from "./FontAwesome.astro";
-import ThemeScript from "./ThemeScript.astro";
-import Favicon from "./Favicon.astro";
-import Footer from "@/components/Footer.astro";
-import { FULL_NAME } from "@/config";
-import Header from "@/components/Header.astro";
+import GoogleFont from '../components/shared/GoogleFont.astro';
+import FontAwesome from '../components/shared/FontAwesome.astro';
+import ThemeScript from '../components/shared/ThemeScript.astro';
+import Favicon from './Favicon.astro';
+import Footer from '@/components/Footer.astro';
+import { FULL_NAME } from '@/config';
+import Header from '@/components/Header.astro';
 ---
 
-<!DOCTYPE html>
-<html class="theme-richie" lang="en">
-  <head>
-    <!-- Global Metadata -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content={FULL_NAME} />
-    <meta name="author" content={FULL_NAME}>
-    <Favicon />
-    <slot name="meta" />
-    <GoogleFont />
-    <ThemeScript />
-    <FontAwesome />
-  </head>
+<!doctype html>
+<html class='theme-richie' lang='en'>
+    <head>
+        <!-- Global Metadata -->
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
+        <meta name='generator' content={Astro.generator} />
+        <meta name='author' content={FULL_NAME} />
+        <Favicon />
+        <slot name='meta' />
+        <GoogleFont />
+        <ThemeScript />
+        <FontAwesome />
+    </head>
 
-  <body
-    class="max-w-3xl mx-auto min-h-screen px-6 sm:px-8"
-  >
-    <Header />
-    <main id="main">
-      <slot name="main" />
-    </main>
-    <Footer />
-    <style>
-      body {
-        display: grid;
-        grid-template-areas:
-          "header"
-          "main"
-          "footer";
-        grid-template-rows: 5rem minmax(0, 1fr) 5rem;
-        grid-template-columns: minmax(0, 1fr);
-      }
-      main {
-        grid-area: main;
-      }
-    </style>
-  </body>
+    <body class='max-w-3xl mx-auto min-h-screen px-6 sm:px-8'>
+        <Header />
+        <main id='main'>
+            <slot name='main' />
+        </main>
+        <Footer />
+        <style>
+            body {
+                display: grid;
+                grid-template-areas:
+                    'header'
+                    'main'
+                    'footer';
+                grid-template-rows: 5rem minmax(0, 1fr) 5rem;
+                grid-template-columns: minmax(0, 1fr);
+            }
+            main {
+                grid-area: main;
+            }
+        </style>
+    </body>
 </html>

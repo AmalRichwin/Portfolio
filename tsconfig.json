@@ -8,7 +8,9 @@
         "./*"
       ]
     },
+    "strictNullChecks": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "allowJs": true
   }
 }
