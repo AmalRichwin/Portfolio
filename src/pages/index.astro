@@ -2,9 +2,16 @@
 import PageLayout from '@/layouts/PageLayout.astro';
 import { SITE_TITLE } from '@/config';
 import BlurCircle from '@/components/shared/BlurCircle.astro';
+import PageMeta from '@/components/PageMeta.astro';
 ---
 
-<PageLayout title={`${SITE_TITLE}`}>
+<PageLayout>
+    <PageMeta
+        title={`${SITE_TITLE} | Fullstack Engineer`}
+        description="Experienced Full Stack Developer with 3 years of expertise. Explore Amal's portfolio showcasing skills in web development, backend, and more."
+        slot='meta'
+        description=''
+    />
     <Fragment slot='main'>
         <section class='mb-8'>
             <div class='mb-6'>
@@ -21,8 +28,8 @@ import BlurCircle from '@/components/shared/BlurCircle.astro';
                 <p class='text-center whitespace-nowrap overflow-auto'>
                     <code class='py-1 px-2'>TO CREATE HISTORY</code>
                 </p>
-                <BlurCircle position='top' color="orange"/>
-                <BlurCircle position='bottom' color="cyan"/>
+                <BlurCircle position='top' color='orange' />
+                <BlurCircle position='bottom' color='cyan' />
             </div>
         </section>
     </Fragment>

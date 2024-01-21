@@ -5,6 +5,9 @@ import GoogleFont from "./GoogleFont.astro";
 import FontAwesome from "./FontAwesome.astro";
 import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
+import Footer from "@/components/Footer.astro";
+import { FULL_NAME } from "@/config";
+import Header from "@/components/Header.astro";
 ---
 
 <!DOCTYPE html>
@@ -13,7 +16,8 @@ import Favicon from "./Favicon.astro";
     <!-- Global Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content="Amal Richwin" />
+    <meta name="generator" content={FULL_NAME} />
+    <meta name="author" content={FULL_NAME}>
     <Favicon />
     <slot name="meta" />
     <GoogleFont />
@@ -24,11 +28,11 @@ import Favicon from "./Favicon.astro";
   <body
     class="max-w-3xl mx-auto min-h-screen px-6 sm:px-8"
   >
-    <!-- <Header /> -->
+    <Header />
     <main id="main">
       <slot name="main" />
     </main>
-    <!-- <Footer /> -->
+    <Footer />
     <style>
       body {
         display: grid;

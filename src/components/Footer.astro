@@ -1,0 +1,63 @@
+---
+
+---
+
+<footer class='text-sm leading-[1.75] mt-4'>
+    <!-- <ul class='flex justify-between max-w-20'>
+        <a target='_blank' href='https://linkedin.com/in/shuvam-manna'>
+            <li class='hover:text-white'>
+                <i class='fab fa-linkedin-in'></i>
+            </li>
+        </a>
+        <a target='_blank' href='https://github.com/geekboysupreme'>
+            <li class='hover:text-white'>
+                <i class='fab fa-github'></i>
+            </li>
+        </a>
+        <a class='bg-none' target='_blank' href='https://twitter.com/AMALRICHWIN'>
+            <li class='hover:text-white'>
+                <i class='fab fa-twitter'></i>
+            </li>
+        </a>
+    </ul> -->
+    <div>
+        © 2024
+        <span
+            class='unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f57111] to-[#f79605]'>
+            Amal Richwin</span
+        >, All rights reserved.
+    </div>
+    <div></div>
+</footer>
+
+<style>
+    footer {
+        grid-area: footer;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gradient-link {
+        position: relative;
+        box-decoration-break: clone;
+        text-decoration: none;
+    }
+
+    .gradient-link:hover:after {
+        transform: translateZ(0) scale(1);
+    }
+
+    .gradient-link:after {
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        content: '';
+        height: 2px;
+        position: absolute;
+        transform: translateZ(0) scaleX(0);
+        transform-origin: left center;
+        transition: all 0.15s ease-in-out;
+    }
+</style>
