@@ -1,8 +1,8 @@
 ---
 import PageLayout from '@/layouts/PageLayout.astro';
 import { SITE_TITLE } from '@/config';
-import BlurCircle from '@/components/shared/BlurCircle.astro';
 import PageMeta from '@/components/shared/PageMeta.astro';
+import TechTags from '@/components/TechTags';
 ---
 
 <PageLayout>
@@ -13,24 +13,42 @@ import PageMeta from '@/components/shared/PageMeta.astro';
         description=''
     />
     <Fragment slot='main'>
-        <section class='mb-8'>
-            <div class='mb-6'>
-                <h1
-                    class='font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden'>
-                    <span
-                        class='bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
-            from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue'>
-                        Amal Richwin
-                    </span>
-                </h1>
-            </div>
-            <div>
-                <p class='text-center whitespace-nowrap overflow-auto'>
-                    <code class='py-1 px-2'>TO CREATE HISTORY</code>
-                </p>
-                <BlurCircle position='top' color='orange' />
-                <BlurCircle position='bottom' color='cyan' />
-            </div>
+        <section>
+            <h1
+                class='font-extrabold text-[2em] md:text-[2.5em] pb-4 text-black font-body leading-[1.25]'>
+                <span class='dark:inline text-text-heading'
+                    >Hello, I'm <span
+                        class='bg-clip-text text-transparent bg-gradient-to-br from-[#fbbf24] via-[#f59e0b] to-[#d97706] dark:from-[#67e8f9] dark:via-[#22d3ee] dark:to-[#06b6d4]'
+                        >Amal Richwin.</span
+                    >
+                </span>
+            </h1>
+            <p class='pb-4'>
+                Imagine a world where technology seamlessly blends with imagination, bridging the
+                gap between ideas and reality. That's the world I strive to create as a full-stack
+                developer. With 3 years of experience under my belt, I'm passionate about crafting
+                innovative and dynamic web applications that not only function flawlessly but also
+                captivate users. I thrive in collaborative environments, tackling complex challenges
+                with a blend of technical expertise and creative problem-solving. Whether it's
+                building intuitive interfaces, architecting robust back-ends, or optimizing
+                performance, I approach every project with a dedication to excellence.
+            </p>
+            <section class='superpowers'>
+                <h2>My Superpowers</h2>
+                <ul>
+                    <li>
+                        <span>Front-End Mastery:</span> React, Next.js, HTML5, CSS3, JavaScript (ES6+),
+                        MUI, Tailwind CSS, Jest, Module Federation – I speak the languages of the web fluently, crafting pixel-perfect user experiences that delight the eye and engage the mind.
+                    </li>
+                    <li>
+                        <span>Back-End Brainiac:</span> Node.js, Express.js, Flask, Nest.js, MongoDB, Redis, Postgres, ElasticSearch, Mocha -  – I'm the architect behind the scenes, ensuring data flows smoothly and servers hum with efficiency.
+                    </li>
+                    <li>
+                        <span>DevOps Dynamo:</span> Docker, Podman, Git, Github, GitLab, CI/CD Pipelines, AWS Cloud (EC2, ELB, VPC, S3, EFS, Lambda, SES, SQS, DynamoDB, ECR, CloudFront), Digital Ocean, Elastic Stack – I keep the development process streamlined and efficient, from code collaboration to cloud deployment.
+                    </li>
+                </ul>
+                <TechTags />
+            </section>
         </section>
     </Fragment>
 </PageLayout>
