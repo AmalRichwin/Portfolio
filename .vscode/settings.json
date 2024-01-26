@@ -1,0 +1,11 @@
+{
+  "search.exclude": {
+    "package-lock.json": true
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.fixAll.eslint",
+    "source.removeUnusedImports"
+  ],
+}

@@ -2,21 +2,20 @@ import {
   AWSIcon,
   CypressIcon,
   DigitalOceanIcon,
-  ExpressIcon,
-  FigmaIcon,
-  GitIcon,
-  IllustratorIcon,
-  JestIcon,
+  ExpressIcon, GitIcon, JestIcon,
   LernaIcon,
   MongoIcon,
   NextIcon,
-  NodeIcon,
-  PhotoshopIcon,
-  TypeScriptIcon,
-  WebpackIcon,
+  NodeIcon, TypeScriptIcon,
+  WebpackIcon
 } from "./icons";
 import DockerIcon from "./icons/DockerIcon";
+import ElasticStack from "./icons/ElasticIcon";
 import FirebaseIcon from "./icons/FirebaseIcon";
+import GitLabIcon from "./icons/GitLabIcon";
+import GolangIcon from "./icons/GolangIcon";
+import MochaIcon from "./icons/MochaIcon";
+import PythonIcon from "./icons/PythonIcon";
 
 const tech = [
   {
@@ -25,11 +24,15 @@ const tech = [
   },
   {
     text: "Next.js (SSR/SSG)",
-    icon: <NextIcon size={15} />,
+    icon: <NextIcon size={15} className="text-gray-900 dark:text-white" />,
   },
   {
     text: "Node.js",
     icon: <NodeIcon size={14} className="fill-green-500" />,
+  },
+  {
+    text: "Golang",
+    icon: <GolangIcon width={15} height={15} className="text-gray-900 dark:text-white" />,
   },
   {
     text: "Docker",
@@ -37,19 +40,15 @@ const tech = [
   },
   {
     text: "Express",
-    icon: <ExpressIcon />,
+    icon: <ExpressIcon className="text-gray-900 dark:text-white" />,
+  },
+  {
+    text: "Python",
+    icon: <PythonIcon className="w-5 h-5" />,
   },
   {
     text: "MongoDB",
     icon: <MongoIcon className="fill-green-500" />,
-  },
-  {
-    text: "Lerna Monorepos",
-    icon: <LernaIcon />,
-  },
-  {
-    text: "Module Federation",
-    icon: <WebpackIcon className="fill-cyan-500" />,
   },
   {
     text: "AWS",
@@ -58,6 +57,10 @@ const tech = [
   {
     text: "DigitalOcean",
     icon: <DigitalOceanIcon />,
+  },
+  {
+    text: "Elastic Stack",
+    icon: <ElasticStack width={15} height={15} />,
   },
   {
     text: "Firebase",
@@ -69,19 +72,34 @@ const tech = [
   },
   {
     text: "Github",
-    icon: <></>
+    icon: <i
+      className='fa-brands fa-github text-gray-900 dark:text-white'
+      aria-hidden='true'
+      title='GitHub'></i>
   },
   {
     text: "GitLab",
-    icon: <></>
+    icon: <GitLabIcon size={15} />
   },
   {
     text: "Jest",
     icon: <JestIcon size={15} />,
   },
   {
+    text: "Mocha",
+    icon: <MochaIcon width={15} height={15} />,
+  },
+  {
+    text: "Lerna Monorepos",
+    icon: <LernaIcon className="text-gray-900 dark:text-white" />,
+  },
+  {
+    text: "Module Federation",
+    icon: <WebpackIcon className="" />,
+  },
+  {
     text: "Cypress",
-    icon: <CypressIcon className="fill-cyan-500" />,
+    icon: <CypressIcon className=" " />,
   },
 
 ];
@@ -89,10 +107,12 @@ const tech = [
 const TechTagsMarquee = () => (
   <div className="flex flex-wrap">
     {tech.map((tech) => (
-      <div className="text-xs mr-2 mb-1.5 inline-flex items-center font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-gray-800 border border-gray-700">
-        <div className="mr-2">{tech.icon}</div>
+      <div key={tech.text} className="text-xs mr-2 mb-1.5 inline-flex items-center font-semibold tracking-wider uppercase px-3 py-1 rounded-full dark:bg-gray-800 border border-gray-700 hover:transition hover:duration-300 hover:ease-in-out">
+        <div className="mr-2 text-white">{tech.icon}</div>
+        <p className="text-gray-900 dark:text-white">
+          {tech.text}
+        </p>
 
-        {tech.text}
       </div>
     ))}
   </div>

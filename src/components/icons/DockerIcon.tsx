@@ -6,7 +6,6 @@ const DockerIcon = (props: SVGProps<SVGSVGElement>) => (
         viewBox="0 0 512 512"
         {...props}
     >
-        <rect width={512} height={512} fill="#fff" rx="15%" />
         <path
             stroke="#066da5"
             strokeWidth={38}

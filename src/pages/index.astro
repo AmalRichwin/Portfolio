@@ -14,16 +14,27 @@ import TechTags from '@/components/TechTags';
     />
     <Fragment slot='main'>
         <section>
+            <figure class="">
+                <img
+                    class='float-end brightness-125 saturate-100 object-cover rounded-[30rem] shine'
+                    src='/images/photo.png'
+                    alt='profile'
+                    width='200'
+                    height='100'
+                    loading='eager'
+                />
+            </figure>
             <h1
                 class='font-extrabold text-[2em] md:text-[2.5em] pb-4 text-black font-body leading-[1.25]'>
                 <span class='dark:inline text-text-heading'
-                    >Hello, I'm <span
-                        class='bg-clip-text text-transparent bg-gradient-to-br from-[#fbbf24] via-[#f59e0b] to-[#d97706] dark:from-[#67e8f9] dark:via-[#22d3ee] dark:to-[#06b6d4]'
-                        >Amal Richwin.</span
+                    >Hello!, I'm
+                    <span
+                        class='bg-clip-text text-transparent bg-purple-300 bg-gradient-to-r from-[#FA8BFF] to-[#2BD2FF]'>
+                        Amal Richwin.</span
                     >
                 </span>
             </h1>
-            <p class='pb-4'>
+            <p class='pb-4 text-pretty'>
                 Imagine a world where technology seamlessly blends with imagination, bridging the
                 gap between ideas and reality. That's the world I strive to create as a full-stack
                 developer. With 3 years of experience under my belt, I'm passionate about crafting
@@ -33,22 +44,28 @@ import TechTags from '@/components/TechTags';
                 building intuitive interfaces, architecting robust back-ends, or optimizing
                 performance, I approach every project with a dedication to excellence.
             </p>
-            <section class='superpowers'>
-                <h2>My Superpowers</h2>
-                <ul>
-                    <li>
-                        <span>Front-End Mastery:</span> React, Next.js, HTML5, CSS3, JavaScript (ES6+),
-                        MUI, Tailwind CSS, Jest, Module Federation – I speak the languages of the web fluently, crafting pixel-perfect user experiences that delight the eye and engage the mind.
-                    </li>
-                    <li>
-                        <span>Back-End Brainiac:</span> Node.js, Express.js, Flask, Nest.js, MongoDB, Redis, Postgres, ElasticSearch, Mocha -  – I'm the architect behind the scenes, ensuring data flows smoothly and servers hum with efficiency.
-                    </li>
-                    <li>
-                        <span>DevOps Dynamo:</span> Docker, Podman, Git, Github, GitLab, CI/CD Pipelines, AWS Cloud (EC2, ELB, VPC, S3, EFS, Lambda, SES, SQS, DynamoDB, ECR, CloudFront), Digital Ocean, Elastic Stack – I keep the development process streamlined and efficient, from code collaboration to cloud deployment.
-                    </li>
-                </ul>
-                <TechTags />
-            </section>
+        </section>
+        <section class='superpowers'>
+            <h2>My Superpowers</h2>
+            <ul>
+                <li>
+                    <span>Front-End Mastery:</span> React, Next.js, HTML5, CSS3, JavaScript (ES6+), MUI,
+                    Tailwind CSS, Jest, Module Federation – I speak the languages of the web fluently,
+                    crafting pixel-perfect user experiences that delight the eye and engage the mind.
+                </li>
+                <li>
+                    <span>Back-End Brainiac:</span> Node.js, Express.js, Flask, Nest.js, MongoDB, Redis,
+                    Postgres, ElasticSearch, Mocha - – I'm the architect behind the scenes, ensuring
+                    data flows smoothly and servers hum with efficiency.
+                </li>
+                <li>
+                    <span>DevOps Dynamo:</span> Docker, Podman, Git, Github, GitLab, CI/CD Pipelines,
+                    AWS Cloud (EC2, ELB, VPC, S3, EFS, Lambda, SES, SQS, DynamoDB, ECR, CloudFront),
+                    Digital Ocean, Elastic Stack – I keep the development process streamlined and efficient,
+                    from code collaboration to cloud deployment.
+                </li>
+            </ul>
+            <TechTags />
         </section>
     </Fragment>
 </PageLayout>

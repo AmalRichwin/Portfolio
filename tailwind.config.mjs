@@ -4,6 +4,13 @@ export default {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			cursor: {
+				"default": "var(--cursorDefault)",
+				"pointer": "var(--cursorPointer)",
+				"grab": "var(--cursorGrab)",
+				"grabbing": "var(--cursorGrabbing)",
+				"text": "var(--cursorText)"
+			},
 			fontFamily: {
 				body: ["Jost", "sans-serif"],
 				heading: ['PT Mono', "monospace"],
@@ -26,6 +33,7 @@ export default {
 					code: "rgb(var(--color-text-code) / <alpha-value>)",
 					link: "rgb(var(--color-text-link) / <alpha-value>)",
 					selection: "rgb(var(--color-text-selection) / <alpha-value>)",
+					richie: "linear-gradient(215deg,#da77f2 0%,#e599f7  35%,#b197fc 100%)",
 				},
 				bg: {
 					body: "rgb(var(--color-bg-body) / <alpha-value>)",
