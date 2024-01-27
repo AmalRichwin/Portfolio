@@ -3,6 +3,7 @@ import PageLayout from '@/layouts/PageLayout.astro';
 import { SITE_TITLE } from '@/config';
 import PageMeta from '@/components/shared/PageMeta.astro';
 import TechTags from '@/components/TechTags';
+import { Image } from 'astro:assets';
 ---
 
 <PageLayout>
@@ -14,15 +15,15 @@ import TechTags from '@/components/TechTags';
     />
     <Fragment slot='main'>
         <section>
-            <figure class="">
-                <img
-                    class='float-end brightness-125 saturate-100 object-cover rounded-[30rem] shine'
-                    src='https://res.cloudinary.com/dxvx4y1yr/image/upload/e_improve:outdoor/photo_bkuxko.jpg'
+            <figure>
+                <Image
+                    class='brightness-125 saturate-100 object-cover rounded-[30rem] shine sm:float-end'
+                    src='https://res.cloudinary.com/dxvx4y1yr/image/upload/f_auto,q_auto/photo_bkuxko'
                     alt='profile'
                     width='200'
                     height='100'
-                    loading='eager'
-                />
+                    loading="eager"
+                    />
             </figure>
             <h1
                 class='font-extrabold text-[2em] md:text-[2.5em] pb-4 text-black font-body leading-[1.25]'>
@@ -65,7 +66,7 @@ import TechTags from '@/components/TechTags';
                     from code collaboration to cloud deployment.
                 </li>
             </ul>
-            <TechTags />
+            <TechTags client:load/>
         </section>
     </Fragment>
 </PageLayout>
