@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Richwin Portfolio",
+    "short_name": "Richwin Portfolio",
+    "start_url": "https://richwin.in/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

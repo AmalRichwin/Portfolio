@@ -1,6 +1,7 @@
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
+import cloudflare from "@astrojs/cloudflare"
 import react from "@astrojs/react";
 import markdoc from "@astrojs/markdoc";
 // import cloudflare from "@astrojs/cloudflare";
@@ -26,6 +27,6 @@ export default defineConfig({
     port: SERVER_PORT
   },
   integrations: [tailwind(), sitemap(), react(), markdoc()],
-  // output: "server",
-  // adapter: cloudflare()
+  output: "server",
+  adapter: cloudflare()
 });
