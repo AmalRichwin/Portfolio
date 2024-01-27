@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   AWSIcon,
   CypressIcon,
@@ -107,16 +106,13 @@ const tech = [
 
 const TechTagsMarquee = () => (<div className="flex flex-wrap">
   {tech.map((tech) => (
-    <motion.div key={tech.text} whileHover={{
-      scale: 1.1,
-      boxShadow: "0px 0px 0px 4px rgba(255, 255, 255, 0.1)"
-    }} className="text-xs mr-2 mb-1.5 inline-flex items-center font-semibold tracking-wider uppercase px-3 py-1 rounded-md dark:bg-gray-800 border border-gray-700 hover:transition hover:duration-300 hover:ease-in-out">
+    <div key={tech.text} className="text-xs mr-2 mb-1.5 inline-flex items-center font-semibold tracking-wider uppercase px-3 py-1 rounded-md dark:bg-gray-800 border border-gray-700 hover:transition hover:duration-300 hover:ease-in-out">
       <div className="mr-2 text-white">{tech.icon}</div>
       <p className="text-gray-900 dark:text-white">
         {tech.text}
       </p>
 
-    </motion.div>
+    </div>
   ))}
 </div >
 )

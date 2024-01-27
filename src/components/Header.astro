@@ -2,9 +2,12 @@
 import Navigation from './Navigation.astro';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import { GITHUB_PROFILE, TWITTER_PROFILE, LINKEDIN_PROFILE } from '@/config';
+import GithubIcon from './icons/GithubIcon';
+import TwitterIcon from './icons/TwitterIcon';
+import LinkedinIcon from './icons/LinkedinIcon';
 ---
 
-<header class='backdrop-blur-sm z-50 '>
+<header class='backdrop-blur-sm z-50'>
     <a
         class='unset absolute z-10 left-[50%] -top-[100rem] translate-x-[-50%] bg-white text-black px-8 py-2 focus:top-[initial]'
         href='#main'>
@@ -17,30 +20,36 @@ import { GITHUB_PROFILE, TWITTER_PROFILE, LINKEDIN_PROFILE } from '@/config';
             target='_blank'
             aria-label='Amal Richwin on Github'
             href={GITHUB_PROFILE}>
-            <i
-                class='fa-brands fa-github transition-[background-size] duration-150 ease-in-out bg-left-bottom bg-[length:0%_55%] bg-no-repeat bg-gradient-to-r from-primary-yellow to-primary-yellow dark:bg-none dark:hover:text-primary-yellow'
-                aria-hidden='true'
-                title='Amal Richwin on GitHub'></i>
+            <GithubIcon
+                width={15}
+                height={15}
+                className='text-gray-800 hover:text-black dark:text-white dark:bg-none dark:hover:text-primary-yellow'
+                title='Amal Richwin on GitHub'
+            />
         </a>
         <a
             class='unset ml-4 rounded-sm'
             target='_blank'
             href={LINKEDIN_PROFILE}
             aria-label='Amal Richwin on Linkedin'>
-            <i
-                class='fa-brands fa-linkedin transition-[background-size] duration-150 bg-left-bottom bg-[length:0%_55%] bg-no-repeat bg-gradient-to-r from-primary-blue to-primary-blue dark:bg-none dark:hover:text-primary-blue'
-                aria-hidden='true'
-                title='Amal Richwin on Linkedin'></i>
-        </a>
+            <LinkedinIcon
+                width={15}
+                height={15}
+                title='Amal Richwin on Linkedin'
+                className='transition-[background-size] duration-150 bg-left-bottom bg-[length:0%_55%] bg-no-repeat bg-gradient-to-r from-primary-blue to-primary-blue dark:bg-none dark:hover:text-primary-blue'
+                />
+            </a>
         <a
             class='unset ml-4 rounded-sm'
             target='_blank'
             href={TWITTER_PROFILE}
             aria-label='Amal Richwin on Twitter'>
-            <i
-                class='fa-brands fa-twitter transition-[background-size] duration-150 bg-left-bottom bg-[length:0%_55%] bg-no-repeat bg-gradient-to-r from-primary-blue to-primary-blue dark:bg-none dark:hover:text-primary-blue'
-                aria-hidden='true'
-                title='Amal Richwin on Twitter'></i>
+            <TwitterIcon 
+            width={15}
+            height={15}
+            className='transition-[background-size] duration-150 bg-left-bottom bg-[length:0%_55%] bg-no-repeat bg-gradient-to-r from-primary-blue to-primary-blue dark:bg-none dark:hover:text-primary-blue'
+            title='Amal Richwin on Twitter'
+            />
         </a>
     </div>
     <DarkModeToggle client:load />
@@ -53,3 +62,4 @@ import { GITHUB_PROFILE, TWITTER_PROFILE, LINKEDIN_PROFILE } from '@/config';
         grid-template-columns: minmax(0, 1fr) minmax(0, max-content) minmax(0, max-content);
     }
 </style>
+./icons/TwitterIcon

@@ -11,7 +11,6 @@ import { Image } from 'astro:assets';
         title={`${SITE_TITLE} | Fullstack Engineer`}
         description="Experienced Full Stack Developer with 3 years of expertise. Explore Amal's portfolio showcasing skills in web development, backend, and more."
         slot='meta'
-        description=''
     />
     <Fragment slot='main'>
         <section>
@@ -22,8 +21,8 @@ import { Image } from 'astro:assets';
                     alt='profile'
                     width='200'
                     height='100'
-                    loading="eager"
-                    />
+                    loading='eager'
+                />
             </figure>
             <h1
                 class='font-extrabold text-[2em] md:text-[2.5em] pb-4 text-black font-body leading-[1.25]'>
@@ -66,7 +65,7 @@ import { Image } from 'astro:assets';
                     from code collaboration to cloud deployment.
                 </li>
             </ul>
-            <TechTags client:load/>
+            <TechTags />
         </section>
     </Fragment>
 </PageLayout>

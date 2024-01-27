@@ -17,3 +17,7 @@ export { default as TypeScriptIcon } from "./TypeScriptIcon";
 export { default as WebpackIcon } from "./WebpackIcon";
 export { default as DigitalOceanIcon } from "./DigitalOceanIcon";
 export { default as FirebaseIcon } from "./FirebaseIcon";
+export { default as GithubIcon } from "./GithubIcon";
+export { default as TwitterIcon } from "./TwitterIcon";
+export { default as MochaIcon } from "./MochaIcon";
+export { default as LinkedinIcon } from "./LinkedinIcon";
