@@ -4,6 +4,7 @@ import { SITE_TITLE } from '@/config';
 import PageMeta from '@/components/shared/PageMeta.astro';
 import TechTags from '@/components/TechTags';
 import { Image } from 'astro:assets';
+import Superpowers from '@/components/Superpowers.astro';
 ---
 
 <PageLayout>
@@ -16,10 +17,10 @@ import { Image } from 'astro:assets';
         <section>
             <figure>
                 <Image
-                class='brightness-125 saturate-100 object-cover rounded-[30rem] shine sm:float-end'
-                src='https://res.cloudinary.com/dxvx4y1yr/image/upload/c_scale,w_312/f_avif/q_auto:eco/photo_bkuxko'
-                alt='profile'
-                width='200'
+                    class='brightness-125 saturate-100 object-cover rounded-[30rem] shine sm:float-end'
+                    src='https://res.cloudinary.com/dxvx4y1yr/image/upload/c_scale,w_312/f_avif/q_auto:eco/photo_bkuxko'
+                    alt='profile'
+                    width='200'
                     height='100'
                     loading='eager'
                 />
@@ -45,28 +46,7 @@ import { Image } from 'astro:assets';
                 performance, I approach every project with a dedication to excellence.
             </p>
         </section>
-        <section class='superpowers'>
-            <h2>My Superpowers</h2>
-            <ul>
-                <li>
-                    <span>Front-End Mastery:</span> React, Next.js, HTML5, CSS3, JavaScript (ES6+), MUI,
-                    Tailwind CSS, Jest, Module Federation – I speak the languages of the web fluently,
-                    crafting pixel-perfect user experiences that delight the eye and engage the mind.
-                </li>
-                <li>
-                    <span>Back-End Brainiac:</span> Node.js, Express.js, Flask, Nest.js, MongoDB, Redis,
-                    Postgres, ElasticSearch, Mocha - – I'm the architect behind the scenes, ensuring
-                    data flows smoothly and servers hum with efficiency.
-                </li>
-                <li>
-                    <span>DevOps Dynamo:</span> Docker, Podman, Git, Github, GitLab, CI/CD Pipelines,
-                    AWS Cloud (EC2, ELB, VPC, S3, EFS, Lambda, SES, SQS, DynamoDB, ECR, CloudFront),
-                    Digital Ocean, Elastic Stack – I keep the development process streamlined and efficient,
-                    from code collaboration to cloud deployment.
-                </li>
-            </ul>
-            <TechTags />
-        </section>
+        <Superpowers />
     </Fragment>
 </PageLayout>
 

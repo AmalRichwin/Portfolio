@@ -2,8 +2,7 @@ import {
   AWSIcon,
   CypressIcon,
   DigitalOceanIcon,
-  ExpressIcon, GitIcon, JestIcon,
-  LernaIcon,
+  ExpressIcon, GitIcon, GithubIcon, JestIcon,
   MongoIcon,
   NextIcon,
   NodeIcon, TypeScriptIcon,
@@ -72,10 +71,7 @@ const tech = [
   },
   {
     text: "Github",
-    icon: <i
-      className='fa-brands fa-github text-gray-900 dark:text-white'
-      aria-hidden='true'
-      title='GitHub'></i>
+    icon: <GithubIcon width={15} height={15} className="text-gray-900 dark:text-white"/>
   },
   {
     text: "GitLab",
@@ -88,10 +84,6 @@ const tech = [
   {
     text: "Mocha",
     icon: <MochaIcon width={15} height={15} />,
-  },
-  {
-    text: "Lerna Monorepos",
-    icon: <LernaIcon className="text-gray-900 dark:text-white" />,
   },
   {
     text: "Module Federation",
